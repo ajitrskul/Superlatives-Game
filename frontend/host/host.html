@@ -5,8 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superlatives Game Host!</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./host.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
   </head>
   <body>
-
+    <!-- <div class="home-background"></div>
+    <div class="fluid-container home-box">
+      <div class="row justify-content-center text-center">
+        <p class="col-10 home-title">Welcome to Julia's New Years/Birthday Party</p>
+      </div>
+      <div class="row justify-content-center text-center">
+        <p class="col-6">Superlatives Game</p>
+      </div>
+      <div class="row justify-content-center text-center">
+        <button class="play-button col-6">Play</button>
+      </div>
+    </div> -->
+    <div class="waiting-background"></div>
+    <div class="players-divider">
+      <p class="player-names">Andy</p>
+      <p class="player-names">Aurora</p>
+      <p class="player-names">David</p>
+      <p class="player-names">Phong</p>
+    </div>
+    <div class="waiting-text-bg">
+      <p class="waiting-text">Waiting for Players...</p>
+    </div>
+    <button class="start-button">Start Game!</button>
+    
+    <script type="module" src="./host.js"></script>
   </body>
 </html>

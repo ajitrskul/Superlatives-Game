@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'Arcane Nine'; /* Name your font */
+  src: url('./Arcane-Nine.otf') format('opentype'); /* Path to the font file */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width:100vw;
+  height:100vh;
+}
+
+.home-background {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-image: url("./menu-bg.jpg");
+  background-size: cover; /* Adjust the size */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  z-index:-1;
+}
+
+.home-box {
+  margin-top:50vh;
+  transform: translateY(-150px);
+  color:white;
+  background-color:black;
+  opacity:0.8;
+  height:260px;
+  width:fit-content;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:20px;
+  padding: 20px 0px 0px 0px;
+}
+
+.home-title {
+  font-family: Arcane Nine;
+  font-size:30px;
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+  -webkit-margin-before: 0.3em; 
+  -webkit-margin-after: 0.2em;
+  background-image: -webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+}
+
+.home-box p {
+  opacity:1;
+}
+
+.play-button {
+  background-color:#1b3d50;
+  color:#ff00a9;
+  border:none;
+  border-radius:14px;
+  width:100px;
+  font-weight:bold;
+  font-size:25px;
+
+  padding:8px 0px;
+  opacity:1.0;
+}
+
+.play-button:active {
+  background-color:#ff00a9;
+  color:#1b3d50;
+}
+
+.waiting-background {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-image: url("./waiting-bg.jpg");
+  background-size: cover; /* Adjust the size */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  z-index:-1;
+}
+
+.waiting-text-bg {
+  position:fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+  background-color: rgba(255, 255, 255, 0.6);
+  height:100px;
+  margin:0px;
+
+  justify-content:center;
+}
+
+.players-divider {
+  position:fixed;
+  top:100px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:150px 150px 150px;
+  text-align:center;
+}
+
+.waiting-text {
+  line-height:70px;
+
+  font-family: Arcane Nine;
+  font-size:50px;
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+  -webkit-margin-before: 0.3em; 
+  -webkit-margin-after: 0.2em;
+  background-image: -webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+
+  width:100vw;
+  text-align:center;
+}
+
+.player-names {
+  color:white;
+  font-size:40px;
+  line-height:150px;
+}
+
+.start-button {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+
+  background-color:#1b3d50;
+  color:#ff00a9;
+  
+  font-size:30px;
+  font-weight:bold;
+
+  border:none;
+  border-radius:40px;
+  padding:5px 35px;   
+}
+
+.start-button:hover {
+  background-color:#ff00a9;
+  color:#1b3d50;
+}
