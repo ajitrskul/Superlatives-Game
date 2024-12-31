@@ -21,7 +21,7 @@ function playerReady() {
   <div class="ready-background"></div>
   <div class="fluid-container ready-box">
     <div class="row justify-content-center">
-      <img class="col-10 check-mark" src="./imgs/checkMarkIcon.webp">
+      <img class="col-10 check-mark" src="{{ url_for('static', filename='imgs/checkMarkIcon.webp.webp') }}">
     </div>
     <div class="row justify-content-center text-center">
       <p class="col-10 ready-text">Welcome ${user}! Please wait while others select their character...</p>
@@ -42,55 +42,55 @@ document.querySelector('.play-button').addEventListener('click', () => {
       </div>
       <div class="row justify-content-center">
         <button class="select-card" id="Andy">
-          <img class="select-pfp" src="./imgs/select-ekko.jpg">
+          <img class="select-pfp" src="{{ url_for('static', filename='imgs/select-ekko.jpg') }}">
           <p class="select-name">Andy</p>
         </button>
       </div>
       <div class="row justify-content-center">
         <button class="select-card" id="Antonio">
-          <img class="select-pfp" src="./imgs/select-heimerdinger.webp">
+          <img class="select-pfp" src="{{ url_for('static', filename='imgs/select-heimerdinger.webp') }}">
           <p class="select-name">Antonio</p>
         </button>
       </div>
       <div class="row justify-content-center">
         <button class="select-card" id="Aurora">
-          <img class="select-pfp" src="./imgs/select-mel.jpg">
+          <img class="select-pfp" src="{{ url_for('static', filename='imgs/select-mel.jpg') }}">
           <p class="select-name">Aurora</p>
         </button>
       </div>
       <div class="row justify-content-center">
         <button class="select-card" id="Conall">
-          <img class="select-pfp" src="./imgs/select-sevika.jpeg">
+          <img class="select-pfp" src="{{ url_for('static', filename='imgs/select-sevika.jpeg') }}">
           <p class="select-name">Conall</p>
         </button>
       </div>
       <div class="row justify-content-center">
         <button class="select-card" id="David">
-          <img class="select-pfp" src="./imgs/select-yordle.png">
+          <img class="select-pfp" src="{{ url_for('static', filename='imgs/select-yordle.png') }}">
           <p class="select-name">David</p>
         </button>
       </div>
       <div class="row justify-content-center">
         <button class="select-card" id="Julia">
-          <img class="select-pfp" src="./imgs/select-caitlyn.webp">
+          <img class="select-pfp" src="{{ url_for('static', filename='imgs/select-caitlyn.webp') }}">
           <p class="select-name">Julia</p>
         </button>
       </div>
       <div class="row justify-content-center">
         <button class="select-card" id="Luke">
-          <img class="select-pfp" src="./imgs/select-jinx.png">
+          <img class="select-pfp" src="{{ url_for('static', filename='imgs/select-jinx.png') }}">
           <p class="select-name">Luke</p>
         </button>
       </div>
       <div class="row justify-content-center">
         <button class="select-card" id="Mar">
-          <img class="select-pfp" src="./imgs/select-lest.png">
+          <img class="select-pfp" src="{{ url_for('static', filename='imgs/select-lest.png') }}">
           <p class="select-name">Mar</p>
         </button>
       </div>
       <div class="row justify-content-center">
         <button class="select-card" id="Phong">
-          <img class="select-pfp" src="./imgs/select-cassandra.webp">
+          <img class="select-pfp" src="{{ url_for('static', filename='imgs/select-cassandra.webp') }}">
           <p class="select-name">Phong</p>
         </button>
       </div>
