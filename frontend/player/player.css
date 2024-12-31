@@ -121,11 +121,20 @@ body {
   border-width:5px;
   border:solid;
   border-image: linear-gradient(to right, #FFF65C 0%, #3A2C00 100%) 1;
+
+  background-color:rgba(0,0,0,0);
+  margin-bottom: 10px;
+}
+
+.select-card:active {
+  color:#ff00a9;
+  background-color:#1b3d50;
+  opacity:0.4
 }
 
 .select-pfp {
-  height:80px;
-  width:80px;
+  height:70px;
+  width:70px;
   object-fit:cover;
   overflow:hidden;
   margin:0px;
@@ -136,9 +145,59 @@ body {
 
 .select-name {
   width:220px;
-  height:80px;
+  height:70px;
   text-align:center;
   line-height:80px;
   margin:0px;
 }
 
+.ready-background {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-image: url("./ready-bg.webp");
+  background-size: cover; /* Adjust the size */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  z-index:-1;
+}
+
+.ready-box {
+  position:fixed;
+  top:40px;
+  left:20px;
+  right:20px;
+  height:fit-content;
+  background-color: rgba(0,0,0,0.4);
+  padding:20px 0px;
+  border-radius:25px;
+
+}
+
+.check-mark {
+  height:100px;
+  width:100px;
+  object-fit:cover;
+
+  border:solid;
+  border-width:10px;
+  border-radius:50px;
+  border-color:#34b233;
+
+  margin-bottom:30px;
+}
+
+.ready-text {
+  font-family:Arcane Nine;
+  font-size:20px;
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+  -webkit-margin-before: 0.3em; 
+  -webkit-margin-after: 0.2em;
+  background-image: -webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+}
