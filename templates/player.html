@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/player.css') }}">
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-    <script src="{{ url_for('static', filename='scripts/player.js') }}"></script>
   </head>
   <body>
     <div class="home-background"></div>
@@ -23,7 +22,9 @@
         <button class="play-button col-6">Play</button>
       </div>
     </div>
-    
-    <script type="module" src="./player.js"></script>
+    <script src="{{ url_for('static', filename='scripts/player.js') }}"></script>
+    <script>
+      window.imageUrl = "{{ url_for('static', filename='imgs/select-ekko.jpg') }}";
+    </script>
   </body>
 </html>

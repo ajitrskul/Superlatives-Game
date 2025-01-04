@@ -66,6 +66,7 @@ body {
 
   padding:8px 0px;
   opacity:1.0;
+  cursor:pointer;
 }
 
 .play-button:active {
@@ -149,10 +150,293 @@ body {
 
   border:none;
   border-radius:40px;
-  padding:5px 35px;   
+  padding:5px 35px;  
+  cursor:pointer; 
 }
 
 .start-button:hover {
   background-color:#ff00a9;
   color:#1b3d50;
+}
+
+.question-text {
+  font-family: Arcane Nine;
+  font-size: 100px;
+  text-align:center;
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+  -webkit-margin-before: 0.3em; 
+  -webkit-margin-after: 0.2em;
+  background-image: -webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+}
+
+.question-box {
+  position:relative;
+  background-color:rgba(0,0,0,0.8);
+  border-radius:50px;
+  width:800px;
+  padding:50px 25px;
+
+  margin-left:50%;
+  margin-top:50vh;
+
+  transform: translateX(-425px) translateY(-200px);
+}
+
+.vote-text {
+  color:white;
+  font-family:Arial;
+  position:absolute;
+  bottom:10px;
+  width:800px;
+  text-align:center;
+}
+
+.host-question-bg {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-image: url("../imgs/host-question-bg-1.jpg");
+  background-size: cover; /* Adjust the size */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  z-index:-1;
+}
+
+.results-button {
+  position:fixed;
+  bottom:30px;
+  right:30px;
+
+  background-color:#1b3d50;
+  color:#ff00a9;
+  border:none;
+  border-radius:25px;
+  font-weight:bold;
+  font-size:25px;
+
+  padding:10px 30px;
+  cursor:pointer;
+}
+
+.results-button:hover {
+  color:#1b3d50;
+  background-color:#ff00a9;
+}
+
+.results-bg {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-image: url("../imgs/results-bg.webp");
+  background-size: cover; /* Adjust the size */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  z-index:-1;
+}
+
+.results-box {
+  height:fit-content;
+  width:90vw;
+  margin-left:5vw;
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  
+  background-color:rgba(255,255,255,0.6);
+  border-radius:20px;
+}
+
+.results-row {
+  height:60px;
+  border-bottom:solid;
+  border-color:black;
+  border-width:2px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+.next-button {
+  position:fixed;
+  bottom:30px;
+  right:30px;
+
+  background-color:#1b3d50;
+  color:#ff00a9;
+  border:none;
+  border-radius:25px;
+  font-weight:bold;
+  font-size:25px;
+
+  padding:10px 30px;
+  cursor:pointer;
+}
+
+.next-button:hover {
+  color:#1b3d50;
+  background-color:#ff00a9;
+}
+
+.results-row-text {
+  margin:0px;
+
+  font-family:Arial;
+  width:100px;
+  line-height:60px;
+  text-align:center;
+  border-right:solid;
+  border-right-width:5px;
+  border-color:black;
+}
+
+.Andy {
+  background-image: url("../imgs/select-ekko.jpg");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Antonio {
+  background-image: url("../imgs/select-heimerdinger.webp");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Aurora {
+  background-image: url("../imgs/select-mel.jpg");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Conall {
+  background-image: url("../imgs/select-sevika.jpeg");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.David {
+  background-image: url("../imgs/select-yordle.png");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Julia {
+  background-image: url("../imgs/select-caitlyn.webp");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Luke {
+  background-image: url("../imgs/select-jinx.png");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Mar {
+  background-image: url("../imgs/select-lest.png");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Phong {
+  background-image: url("../imgs/select-cassandra.webp");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
 }

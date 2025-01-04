@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'Arcane Nine'; /* Name your font */
+  src: url('./static/Arcane-Nine.otf') format('opentype'); /* Path to the font file */
+}
+
+.results-bg {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-image: url("./static/imgs/results-bg.webp");
+  background-size: cover; /* Adjust the size */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  z-index:-1;
+}
+
+.results-box {
+  margin-top:20px;
+  height:100%;
+  width:100vw;
+  display:flex;
+  flex-direction:column;
+  
+  background-color:rgba(255,255,255,0.6);
+  border-radius:20px;
+}
+
+.results-row {
+  height:60px;
+  border-bottom:solid;
+  border-color:black;
+  border-width:2px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+.next-button {
+  position:fixed;
+  bottom:30px;
+  right:30px;
+
+  background-color:#1b3d50;
+  color:#ff00a9;
+  border:none;
+  border-radius:25px;
+  font-weight:bold;
+  font-size:25px;
+
+  padding:10px 30px;
+  cursor:pointer;
+}
+
+.next-button:hover {
+  color:#1b3d50;
+  background-color:#ff00a9;
+}
+
+.results-row-text {
+  margin:0px;
+
+  font-family:Arial;
+  width:100px;
+  line-height:60px;
+  text-align:center;
+  border-right:solid;
+  border-right-width:5px;
+  border-color:black;
+}
+
+.Andy {
+  background-image: url("./static/imgs/select-ekko.jpg");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Antonio {
+  background-image: url("./static/imgs/select-heimerdinger.webp");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Aurora {
+  background-image: url("./static/imgs/select-mel.jpg");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Conall {
+  background-image: url("./static/imgs/select-sevika.jpeg");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.David {
+  background-image: url("./static/imgs/select-yordle.png");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Julia {
+  background-image: url("./static/imgs/select-caitlyn.webp");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Luke {
+  background-image: url("./static/imgs/select-jinx.png");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Mar {
+  background-image: url("./static/imgs/select-lest.png");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}
+
+.Phong {
+  background-image: url("./static/imgs/select-cassandra.webp");
+  height:54px;
+  width:54px;
+  background-size:cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+
+  border:solid;
+
+  border-width:1px;
+  border-radius:50%;
+
+  margin-left:10px;
+}

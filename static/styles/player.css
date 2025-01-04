@@ -201,3 +201,30 @@ body {
   background-image: -webkit-linear-gradient(#FFF65C, #3A2C00);
   text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
 }
+
+.vote-background {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-image: url("../imgs/question-bg-1.jpg");
+  background-size: cover; /* Adjust the size */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  z-index:-2;
+}
+
+.vote-background-2 {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color:rgba(0,0,0,0.8);
+  z-index:-1;
+}
+
+.vote-container {
+  margin-top:50px;
+}
