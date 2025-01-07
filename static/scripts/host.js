@@ -1,5 +1,5 @@
 let QUESTIONS = ['Who is the smartest?', "Who is the hottest?", "Who will get married first?", "Who will be the most successful?",
-  "Who will have kids first?"
+  "Who will have kids first?", "Who is most likely to get a face tattoo?", "Who is the most likely to get punched?", "Who is most likely to get a tattoo that they will regret?", "Who is the most likely to take a body shot off a stranger?", "Who would own the most sex toys?", "Who is most likely to die first in a horror movie?", "Who's douche water would be the clearest?", "Who is most likely to join a gang?", "Who is the best liar", "Most likely to get pregnant?", "Who has the stinkiest vagina?", "Most likely to die in a car accident?", "Worst interviewee?"
 ]
 let index = 0;
 
@@ -17,7 +17,9 @@ let results = {
 
 const names = ["Andy", "Antonio", "Aurora", "Conall", "David", "Julia", "Luke", "Mar", "Phong"];
 
-let socket;
+let socket = null;
+
+let num_players = 0;
 
 function resetResults() {
   results = {
@@ -34,6 +36,7 @@ function resetResults() {
 }
 //home page
 function receiveUser(user) {
+  num_players += 1;
   document.querySelector('.players-divider').innerHTML += `
   <p class="player-names">${user}</p>
   `;
@@ -108,6 +111,7 @@ function showResults() {
   else {
     document.querySelector('.next-button').addEventListener('click', () => {
       //end game page
+      socket.emit("end_game");
       document.body.innerHTML = `
       <div class="end-bg"></div>
       <div class="end-box">
@@ -121,6 +125,7 @@ function showResults() {
 
 function showQuestion() {
   resetResults();
+  socket.emit("next_question");
   document.body.innerHTML = `
   `;
   document.body.innerHTML = `

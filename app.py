@@ -40,6 +40,16 @@ def start_game():
 def handle_vote(vote):
     socketio.emit('update_vote', vote)
 
+#When host proceeds to next question
+@socketio.on('next_question')
+def next_question():
+    socketio.emit("next_question")
+
+#When host proceeds to end game screen
+@socketio.on("end_game")
+def end_game():
+    socketio.emit("end_game")
+
 if __name__ == '__main__':
     socketio.run(app, debug=True)
     #socketio.run(app, host='0.0.0.0', port=80)

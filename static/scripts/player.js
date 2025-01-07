@@ -17,6 +17,110 @@ function saveUser() {
 
 loadUser();
 
+function endGame() {
+  socket.off(nextQuestion);
+  socket.off(endGame);
+  document.body.innerHTML = `
+  <div class="end-background"></div>
+  <div class="fluid-container ready-box">
+    <div class="row justify-content-center text-center">
+      <p class="col-10 ready-text">Thank you for playing!</p>
+    </div>
+  </div>
+  `;
+}
+
+function nextQuestion() {
+  socket.off(nextQuestion);
+  socket.off(endGame);
+  document.body.innerHTML = `
+    <div class="vote-background"></div>
+    <div class="vote-background-2"></div>
+    <div class="fluid-container vote-container">
+      <div class="row justify-content-center">
+        <button class="select-card" id="Andy">
+          <img class="select-pfp" src="../static/imgs/select-ekko.jpg">
+          <p class="select-name">Andy</p>
+        </button>
+      </div>
+      <div class="row justify-content-center">
+        <button class="select-card" id="Antonio">
+          <img class="select-pfp" src="../static/imgs/select-heimerdinger.webp">
+          <p class="select-name">Antonio</p>
+        </button>
+      </div>
+      <div class="row justify-content-center">
+        <button class="select-card" id="Aurora">
+          <img class="select-pfp" src="../static/imgs/select-mel.jpg">
+          <p class="select-name">Aurora</p>
+        </button>
+      </div>
+      <div class="row justify-content-center">
+        <button class="select-card" id="Conall">
+          <img class="select-pfp" src="../static/imgs/select-sevika.jpeg">
+          <p class="select-name">Conall</p>
+        </button>
+      </div>
+      <div class="row justify-content-center">
+        <button class="select-card" id="David">
+          <img class="select-pfp" src="../static/imgs/select-yordle.png">
+          <p class="select-name">David</p>
+        </button>
+      </div>
+      <div class="row justify-content-center">
+        <button class="select-card" id="Julia">
+          <img class="select-pfp" src="../static/imgs/select-caitlyn.webp">
+          <p class="select-name">Julia</p>
+        </button>
+      </div>
+      <div class="row justify-content-center">
+        <button class="select-card" id="Luke">
+          <img class="select-pfp" src="../static/imgs/select-jinx.png">
+          <p class="select-name">Luke</p>
+        </button>
+      </div>
+      <div class="row justify-content-center">
+        <button class="select-card" id="Mar">
+          <img class="select-pfp" src="../static/imgs/select-lest.png">
+          <p class="select-name">Mar</p>
+        </button>
+      </div>
+      <div class="row justify-content-center">
+        <button class="select-card" id="Phong">
+          <img class="select-pfp" src="../static/imgs/select-cassandra.webp">
+          <p class="select-name">Phong</p>
+        </button>
+      </div>
+    </div>
+  `; 
+
+  document.querySelectorAll(".select-card").forEach(card => {
+    card.addEventListener('click', (event) => {
+        const selection = event.currentTarget.id;  // Get the id of the clicked button 
+        console.log(selection);
+        const vote = {
+            username: user,    // user who made this vote
+            choice: selection  // The id of the clicked button
+        };
+        socket.emit('vote', vote);  // Send the vote data to the server
+        answerSubmitted();
+    });
+  });
+}
+
+function answerSubmitted() {
+  socket.on("next_question", nextQuestion);
+  socket.on("end_game", endGame);
+  document.body.innerHTML = `
+  <div class="submitted-background"></div>
+  <div class="fluid-container ready-box">
+    <div class="row justify-content-center text-center">
+      <p class="col-10 ready-text">Answer submitted. Waiting for host...</p>
+    </div>
+  </div>
+  `;
+}
+
 function startGame() {
   socket.off(startGame);
   document.body.innerHTML = `
@@ -89,6 +193,7 @@ function startGame() {
             choice: selection  // The id of the clicked button
         };
         socket.emit('vote', vote);  // Send the vote data to the server
+        answerSubmitted();
     });
   });
 }
