@@ -196,6 +196,36 @@ body {
   text-align:center;
 }
 
+.players-voted-text {
+  position:absolute;
+  top:15px;
+  right:35px;
+
+  font-family: Arcane Nine;
+  font-size:20px;
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+  -webkit-margin-before: 0.3em; 
+  -webkit-margin-after: 0.2em;
+  background-image: -webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+}
+
+.num-voted-text {
+  font-family: Arcane Nine;
+  font-size:20px;
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+  -webkit-margin-before: 0.3em; 
+  -webkit-margin-after: 0.2em;
+  background-image: -webkit-linear-gradient(#ff5c5c, #3a0000);
+  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+}
+
 .host-question-bg {
   position:fixed;
   top:0;
@@ -480,4 +510,35 @@ body {
   margin-top:50vh;
 
   transform: translateX(-425px) translateY(-200px);
+}
+
+.connected-text {
+  position:fixed;
+  right:15px;
+  top:40px;
+  z-index:1;
+  
+  font-family: Arcane Nine;
+  font-size:30px;
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+  -webkit-margin-before: 0.3em; 
+  -webkit-margin-after: 0.2em;
+  background-image: -webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+}
+
+.num-connected-text {
+  font-family: Arcane Nine;
+  font-size:30px;
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+  -webkit-margin-before: 0.3em; 
+  -webkit-margin-after: 0.2em;
+  background-image: -webkit-linear-gradient(#ff5c5c, #3a0000);
+  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
 }

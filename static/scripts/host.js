@@ -20,6 +20,7 @@ const names = ["Andy", "Antonio", "Aurora", "Conall", "David", "Julia", "Luke", 
 let socket = null;
 
 let num_players = 0;
+let num_votes = 0;
 
 function resetResults() {
   results = {
@@ -40,10 +41,12 @@ function receiveUser(user) {
   document.querySelector('.players-divider').innerHTML += `
   <p class="player-names">${user}</p>
   `;
+  document.querySelector('.connected-text').innerHTML = `
+  <span class="num-connected-text">${num_players}</span> player(s) connected
+  `;
 }
 
 function updateVote(vote) {
-  console.log(vote);
   let hasVoted = false;
   for (let i = 0; i < results[vote.choice].length; i++) {
     if (results[vote.choice][i] === vote.username) {
@@ -51,11 +54,17 @@ function updateVote(vote) {
     }
   }
   if (!hasVoted) {
+    num_votes += 1;
+    document.querySelector('.num-voted-text').innerHTML = `
+    ${num_votes}/${num_players}
+    `;
+
     results[vote.choice].push(vote.username);
   }
 }
 
 function showResults() {
+  num_votes = 0; //reset votes in between rounds
   document.body.innerHTML = `
   <div class="results-bg"></div>
   <div class="results-box">
@@ -127,12 +136,11 @@ function showQuestion() {
   resetResults();
   socket.emit("next_question");
   document.body.innerHTML = `
-  `;
-  document.body.innerHTML = `
   <div class="host-question-bg"></div>
   <div class="question-box">
     <p class="question-text">${QUESTIONS[index]}</p>
     <p class="vote-text">Please place your vote</p>
+    <p class="players-voted-text"><span class="num-voted-text">0/${num_players}</span> votes received</p>
   </div>
   
   <button class="results-button">Show Results</button>
@@ -151,6 +159,7 @@ document.querySelector('.play-button').addEventListener('click', () => {
   document.body.innerHTML = `
   <div class="waiting-background"></div>
   <div class="players-divider"></div>
+  <p class="connected-text"><span class="num-connected-text">0</span> player(s) connected</p>
   <div class="waiting-text-bg">
     <p class="waiting-text">Waiting for Players...</p>
   </div>
@@ -175,6 +184,7 @@ document.querySelector('.play-button').addEventListener('click', () => {
     <div class="question-box">
       <p class="question-text">${QUESTIONS[index]}</p>
       <p class="vote-text">Please place your vote</p>
+      <p class="players-voted-text"><span class="num-voted-text">0/${num_players}</span> votes received</p>
     </div>
     
     <button class="results-button">Show Results</button>
