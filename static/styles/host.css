@@ -31,7 +31,7 @@ body {
   background-color:black;
   opacity:0.8;
   height:260px;
-  width:fit-content;
+  width:500px;
   margin-left:auto;
   margin-right:auto;
   border-radius:20px;
@@ -39,8 +39,9 @@ body {
 }
 
 .home-title {
+  line-height:70px;
   font-family: Arcane Nine;
-  font-size:30px;
+  font-size:60px;
   background-clip:text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -439,4 +440,44 @@ body {
   border-radius:50%;
 
   margin-left:10px;
+}
+
+.end-bg {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-image: url("../imgs/end-bg.png");
+  background-size: cover; /* Adjust the size */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  z-index:-1;
+}
+
+.end-text {
+  font-family: Arcane Nine;
+  font-size: 100px;
+  text-align:center;
+  background-clip:text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+  -webkit-margin-before: 0.3em; 
+  -webkit-margin-after: 0.2em;
+  background-image: -webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+}
+
+.end-box {
+  position:relative;
+  background-color:rgba(0,0,0,0.8);
+  border-radius:50px;
+  width:800px;
+  padding:50px 25px;
+
+  margin-left:50%;
+  margin-top:50vh;
+
+  transform: translateX(-425px) translateY(-200px);
 }

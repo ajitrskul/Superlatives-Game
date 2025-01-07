@@ -41,8 +41,8 @@ def handle_vote(vote):
     socketio.emit('update_vote', vote)
 
 if __name__ == '__main__':
-    #socketio.run(app, debug=True)
-    socketio.run(app, host='0.0.0.0', port=80)
+    socketio.run(app, debug=True)
+    #socketio.run(app, host='0.0.0.0', port=80)
 
 
 

@@ -1,5 +1,8 @@
-let QUESTIONS = ['Who is the smartest?']
+let QUESTIONS = ['Who is the smartest?', "Who is the hottest?", "Who will get married first?", "Who will be the most successful?",
+  "Who will have kids first?"
+]
 let index = 0;
+
 let results = {
   Andy: [],
   Antonio: [],
@@ -13,6 +16,8 @@ let results = {
 };
 
 const names = ["Andy", "Antonio", "Aurora", "Conall", "David", "Julia", "Luke", "Mar", "Phong"];
+
+let socket;
 
 function resetResults() {
   results = {
@@ -36,7 +41,15 @@ function receiveUser(user) {
 
 function updateVote(vote) {
   console.log(vote);
-  results[vote.choice].push(vote.username);
+  let hasVoted = false;
+  for (let i = 0; i < results[vote.choice].length; i++) {
+    if (results[vote.choice][i] === vote.username) {
+      hasVoted = true;
+    }
+  }
+  if (!hasVoted) {
+    results[vote.choice].push(vote.username);
+  }
 }
 
 function showResults() {
@@ -97,7 +110,9 @@ function showResults() {
       //end game page
       document.body.innerHTML = `
       <div class="end-bg"></div>
-      <p class="end-text">Thanks for Playing</p>
+      <div class="end-box">
+        <p class="end-text">Thanks for playing <3</p>
+      </div>
       `;
     });
   }
@@ -108,6 +123,16 @@ function showQuestion() {
   resetResults();
   document.body.innerHTML = `
   `;
+  document.body.innerHTML = `
+  <div class="host-question-bg"></div>
+  <div class="question-box">
+    <p class="question-text">${QUESTIONS[index]}</p>
+    <p class="vote-text">Please place your vote</p>
+  </div>
+  
+  <button class="results-button">Show Results</button>
+  `;
+  index += 1;
   socket.on('update_vote', updateVote);
 
   document.querySelector('.results-button').addEventListener('click', () => {
@@ -127,7 +152,7 @@ document.querySelector('.play-button').addEventListener('click', () => {
   <button class="start-button">Start Game!</button>
   `;
 
-  const socket = io();  // Connect to the server
+  socket = io();  // Connect to the server
   // Listen for the 'send_user' event from the server
 
   socket.on('send_user', receiveUser);
