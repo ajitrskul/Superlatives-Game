@@ -106,7 +106,7 @@ function showResults() {
 
     for (let j = 0; j < size; j++) {
       resultRows[i].innerHTML += `
-      <div class=${results[names[i]][j]}></div>
+      <div id=${results[names[i]][j]} class="player-pic"></div>
       `;
     }
   }

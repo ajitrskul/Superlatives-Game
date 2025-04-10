@@ -22,9 +22,9 @@ function endGame() {
   socket.off(endGame);
   document.body.innerHTML = `
   <div class="end-background"></div>
-  <div class="fluid-container ready-box">
+  <div class="fluid-container end-box">
     <div class="row justify-content-center text-center">
-      <p class="col-10 ready-text">Thank you for playing!</p>
+      <p class="col-10 end-text">Thank you for playing!</p>
     </div>
   </div>
   `;
@@ -113,9 +113,9 @@ function answerSubmitted() {
   socket.on("end_game", endGame);
   document.body.innerHTML = `
   <div class="submitted-background"></div>
-  <div class="fluid-container ready-box">
+  <div class="fluid-container submitted-box">
     <div class="row justify-content-center text-center">
-      <p class="col-10 ready-text">Answer submitted. Waiting for host...</p>
+      <p class="col-10 submitted-text">Answer submitted. Waiting for host...</p>
     </div>
   </div>
   `;

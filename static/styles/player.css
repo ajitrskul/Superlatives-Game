@@ -1,15 +1,53 @@
 @font-face {
-  font-family: 'Arcane Nine'; /* Name your font */
-  src: url('../Arcane-Nine.otf') format('opentype'); /* Path to the font file */
+  font-family:'Arcane Nine'; /* Name your font */
+  src:url('../Arcane-Nine.otf') format('opentype'); /* Path to the font file */
 }
 
 body {
-  margin: 0;
-  margin-left:10px;
-  padding: 0;
-  overflow-x: hidden;
+  margin:0;
+  padding:0;
+  overflow:hidden;
   width:100vw;
   height:100vh;
+}
+
+/* HOME PAGE */
+
+@media (min-width:1001px) {
+  .home-background {
+    background-image:url("../imgs/player-large-bg-1.jpg");
+  }
+
+  .home-box {
+    width:500px;
+    height:200px;
+    transform:translateY(calc(50vh - 100px));
+  }
+
+  .home-title {
+    margin-top:35px !important;
+  }
+}
+
+@media (max-width:1000px) {
+  .home-background {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-image:url("../imgs/home-bg.webp");
+    background-size:cover; 
+    background-position:center; 
+    background-repeat:no-repeat; 
+    z-index:-1;
+  }
+
+  .home-box {
+    width:350px;
+    height:150px;
+    transform:translateY(calc(50vh - 75px));
+  }
 }
 
 .home-background {
@@ -18,35 +56,32 @@ body {
   bottom:0;
   left:0;
   right:0;
-  background-image: url("../imgs/home-bg.webp");
-  background-size: cover; /* Adjust the size */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent tiling */
+  background-size:cover; 
+  background-position:center; 
+  background-repeat:no-repeat; 
   z-index:-1;
 }
 
 .home-box {
-  margin-top:50%;
   color:white;
   background-color:black;
   opacity:0.8;
-  margin-left:20px;
-  margin-right:20px;
   border-radius:20px;
-  padding: 20px 0px;
+  padding:20px 0px;
+  margin:0 auto;
 }
 
 .home-title {
-  font-family: Arcane Nine;
+  font-family:Arcane Nine;
   font-size:30px;
   background-clip:text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
   font-weight:bold;
-  -webkit-margin-before: 0.3em; 
-  -webkit-margin-after: 0.2em;
-  background-image: -webkit-linear-gradient(#FFF65C, #3A2C00);
-  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+  -webkit-margin-before:0.3em; 
+  -webkit-margin-after:0.2em;
+  background-image:-webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow:-0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
 }
 
 .home-box p {
@@ -71,16 +106,28 @@ body {
   color:#1b3d50;
 }
 
+/* SELECT PLAYER PAGE */
+@media (min-width:1001px) {
+  .select-background {
+    background-image:url("../imgs/player-large-bg-3.jpg");
+  }
+}
+
+@media (max-width:1000px) {
+  .select-background {
+    background-image:url("../imgs/select-bg.jpg");
+  }
+}
+
 .select-background {
   position:fixed;
   top:0;
   bottom:0;
   left:0;
   right:0;
-  background-image: url("../imgs/select-bg.jpg");
-  background-size: cover; /* Adjust the size */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent tiling */
+  background-size:cover; /* Adjust the size */
+  background-position:center; /* Center the image */
+  background-repeat:no-repeat; /* Prevent tiling */
   z-index:-2;
 }
 
@@ -90,28 +137,28 @@ body {
   bottom:0;
   left:0;
   right:0;
-  background-color:rgba(0,0,0,0.8);
+  background-color:rgba(0,0,0,0.5);
   z-index:-1;
 }
 
 .select-title {
-  font-family: Arcane Nine;
+  font-family:Arcane Nine;
   font-size:40px;
 
   background-clip:text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
   font-weight:bold;
-  -webkit-margin-before: 0.3em; 
-  -webkit-margin-after: 0.2em;
-  background-image: -webkit-linear-gradient(#FFF65C, #3A2C00);
-  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+  -webkit-margin-before:0.3em; 
+  -webkit-margin-after:0.2em;
+  background-image:-webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow:-0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
 }
 
 .select-card {
-  font-family: Arcane Nine;
+  font-family:Arcane Nine;
   color:white;
-  font-size: 30px;
+  font-size:30px;
   width:300px;
   height:fit-content;
   padding:0px;
@@ -120,10 +167,10 @@ body {
 
   border-width:5px;
   border:solid;
-  border-image: linear-gradient(to right, #FFF65C 0%, #3A2C00 100%) 1;
+  border-image:linear-gradient(to right, #FFF65C 0%, #3A2C00 100%) 1;
 
-  background-color:rgba(0,0,0,0);
-  margin-bottom: 10px;
+  background-color:rgba(0,0,0,0.4);
+  margin-bottom:10px;
 }
 
 .select-card:active {
@@ -151,29 +198,47 @@ body {
   margin:0px;
 }
 
+/* READY & WAITING FOR GAME PAGE */
+@media (min-width:1001px) {
+  .ready-background {
+    background-image:url("../imgs/player-large-bg-2.jpg");
+  }
+
+  .ready-box {
+    height:250px;
+    width:600px;
+  }
+}
+
+@media (max-width:1000px) {
+  .ready-background {
+    background-image:url("../imgs/ready-bg.webp");
+  }
+
+  .ready-box {
+    height:250px;
+    width:350px;
+  }
+}
+
 .ready-background {
   position:fixed;
   top:0;
   bottom:0;
   left:0;
   right:0;
-  background-image: url("../imgs/ready-bg.webp");
-  background-size: cover; /* Adjust the size */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent tiling */
+  background-size:cover;
+  background-position:center; 
+  background-repeat:no-repeat; 
   z-index:-1;
 }
 
 .ready-box {
-  position:fixed;
-  top:40px;
-  left:20px;
-  right:20px;
-  height:fit-content;
-  background-color: rgba(0,0,0,0.4);
+  transform:translateY(10vh);
+  background-color:rgba(0,0,0,0.4);
   padding:20px 0px;
   border-radius:25px;
-
+  margin:0 auto;
 }
 
 .check-mark {
@@ -193,13 +258,26 @@ body {
   font-family:Arcane Nine;
   font-size:20px;
   background-clip:text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
   font-weight:bold;
-  -webkit-margin-before: 0.3em; 
-  -webkit-margin-after: 0.2em;
-  background-image: -webkit-linear-gradient(#FFF65C, #3A2C00);
-  text-shadow: -0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+  -webkit-margin-before:0.3em; 
+  -webkit-margin-after:0.2em;
+  background-image:-webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow:-0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+}
+
+/* VOTE FOR PLAYER PAGE */
+@media (min-width:1001px) {
+  .vote-background {
+    background-image:url("../imgs/player-large-bg-4.jpg");
+  }
+}
+
+@media (max-width:1000px) {
+  .vote-background {
+    background-image:url("../imgs/ready-bg.webp");
+  }
 }
 
 .vote-background {
@@ -208,10 +286,9 @@ body {
   bottom:0;
   left:0;
   right:0;
-  background-image: url("../imgs/question-bg-1.jpg");
-  background-size: cover; /* Adjust the size */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent tiling */
+  background-size:cover; /* Adjust the size */
+  background-position:center; /* Center the image */
+  background-repeat:no-repeat; /* Prevent tiling */
   z-index:-2;
 }
 
@@ -226,20 +303,41 @@ body {
 }
 
 .vote-container {
-  margin-top:50px;
+  height:775px;
+  transform:translateY(calc(50vh - 387px));
 }
 
-.end-background {
-  position:fixed;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  background-image: url("../imgs/player-end-bg.webp");
-  background-size: cover; /* Adjust the size */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent tiling */
-  z-index:-1;
+/* SUBMITTED QUESTION PAGE */
+@media (min-width:1001px) {
+  .submitted-background {
+    background-image:url("../imgs/player-large-bg-5.jpg");
+  }
+
+  .submitted-text {
+    font-size:50px;
+  }
+
+  .submitted-box {
+    width:600px;
+    height:250px;
+    transform:translateY(calc(50vh - 125px));
+  }
+}
+
+@media (max-width:1000px) {
+  .submitted-background {
+    background-image:url("../imgs/question-submitted-bg.webp");
+  }
+
+  .submitted-text {
+    font-size:25px;
+  }
+
+  .submitted-box {
+    width:350px;
+    height:150px;
+    transform:translateY(calc(50vh - 75px));
+  }
 }
 
 .submitted-background {
@@ -248,9 +346,92 @@ body {
   bottom:0;
   left:0;
   right:0;
-  background-image: url("../imgs/question-submitted-bg.webp");
-  background-size: cover; /* Adjust the size */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent tiling */
+  background-size:cover; 
+  background-position:center; 
+  background-repeat:no-repeat; 
   z-index:-1;
 }
+
+.submitted-box {
+  margin:0 auto;
+  background-color:rgba(0,0,0,0.4);
+  padding:20px 0px;
+  border-radius:25px;
+}
+
+.submitted-text {
+  font-family:Arcane Nine;
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:bold;
+  -webkit-margin-before:0.3em; 
+  -webkit-margin-after:0.2em;
+  background-image:-webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow:-0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+}
+
+/* END OF GAME PAGE */
+@media (min-width:1001px) {
+  .end-background {
+    background-image:url("../imgs/player-large-bg-6.jpg");
+  }
+
+  .end-text {
+    font-size:50px;
+  }
+
+  .end-box {
+    width:600px;
+    height:150px;
+    transform:translateY(calc(50vh - 75px));
+  }
+}
+
+@media (max-width:1000px) {
+  .end-background {
+    background-image:url("../imgs/player-end-bg.webp");
+  }
+
+  .end-text {
+    font-size:20px;
+  }
+
+  .end-box {
+    width:350px;
+    height:80px;
+    transform:translateY(calc(50vh - 40px));
+  }
+}
+
+.end-background {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-size:cover;
+  background-position:center; 
+  background-repeat:no-repeat;
+  z-index:-1;
+}
+
+.end-box {
+  margin:0 auto;
+  padding:20px 0px;
+  border-radius:25px;
+  background-color:rgba(0,0,0,0.4);
+}
+
+.end-text {
+  font-family:Arcane Nine;
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:bold;
+  -webkit-margin-before:0.3em; 
+  -webkit-margin-after:0.2em;
+  background-image:-webkit-linear-gradient(#FFF65C, #3A2C00);
+  text-shadow:-0.02em -0.03em 0.005em rgba(255, 223, 0, 0.60);
+}
+
