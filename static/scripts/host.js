@@ -158,6 +158,10 @@ function showQuestion() {
 document.querySelector('.play-button').addEventListener('click', () => {
   document.body.innerHTML = `
   <div class="waiting-background"></div>
+  <div class="waiting-qrdiv">
+    <img class="waiting-qr" src="../static/imgs/waiting-qrcode.png" alt="Join Game QR Code">
+    <p class="waiting-qrtext">Scan to Join!</p>
+  </div>
   <div class="players-divider"></div>
   <p class="connected-text"><span class="num-connected-text">0</span> player(s) connected</p>
   <div class="waiting-text-bg">

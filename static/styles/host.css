@@ -11,6 +11,8 @@ body {
   height:100vh;
 }
 
+/* HOME PAGE */
+
 .home-background {
   position:fixed;
   top:0;
@@ -74,6 +76,8 @@ body {
   background-color:#ff00a9;
   color:#1b3d50;
 }
+
+/* WAITING PAGE */
 
 .waiting-background {
   position:fixed;
@@ -159,6 +163,42 @@ body {
   background-color:#ff00a9;
   color:#1b3d50;
 }
+
+.waiting-qrdiv {
+  position:fixed;
+  top:10px;
+  left:20px;
+  display:flex;
+  flex-direction:row;
+  z-index:100;
+}
+
+.waiting-qr {
+  /* object-fit: cover; */
+  height: 80px;
+  width: 80px;
+  margin-bottom: 0px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color:black;
+}
+
+.waiting-qrtext {
+  margin-top: 0px;
+  margin-left: 17px;
+  
+  font-family: Arcane Nine;
+  font-size:15px;
+  font-weight:bold;
+  color:black;
+
+  transform: rotate(90deg);
+  transform-origin: left top;
+  text-align: center;
+}
+
+/* QUESTIONS PAGE */
 
 .question-text {
   font-family: Arcane Nine;
@@ -259,6 +299,8 @@ body {
   color:#1b3d50;
   background-color:#ff00a9;
 }
+
+/* RESULTS PAGE */
 
 .results-bg {
   position:fixed;
@@ -471,6 +513,8 @@ body {
 
   margin-left:10px;
 }
+
+/* END PAGE */
 
 .end-bg {
   position:fixed;
