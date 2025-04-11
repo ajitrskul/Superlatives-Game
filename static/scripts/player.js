@@ -28,6 +28,7 @@ function endGame() {
     </div>
   </div>
   `;
+  document.body.style.overflowY = "scroll";
 }
 
 function nextQuestion() {
@@ -93,7 +94,7 @@ function nextQuestion() {
       </div>
     </div>
   `; 
-
+  document.body.style.overflowY = "scroll";
   document.querySelectorAll(".select-card").forEach(card => {
     card.addEventListener('click', (event) => {
         const selection = event.currentTarget.id;  // Get the id of the clicked button 
@@ -106,6 +107,7 @@ function nextQuestion() {
         answerSubmitted();
     });
   });
+
 }
 
 function answerSubmitted() {
@@ -119,6 +121,7 @@ function answerSubmitted() {
     </div>
   </div>
   `;
+  document.body.style.overflowY = "hidden";
 }
 
 function startGame() {
@@ -196,6 +199,7 @@ function startGame() {
         answerSubmitted();
     });
   });
+  document.body.style.overflowY = "scroll";
 }
 
 //call after player selects character
@@ -211,6 +215,7 @@ function playerReady() {
     </div>
   </div>
   `;
+  document.body.style.overflowY = "hidden";
   socket.emit('new_user', user);
 
   socket.on('start_game', startGame);
@@ -282,6 +287,7 @@ document.querySelector('.play-button').addEventListener('click', () => {
       </div>
     </div>
     `;
+    document.body.style.overflowY = "scroll";
 
     //Select Page
     document.getElementById('Andy').addEventListener('click', () => {
